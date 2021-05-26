@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react'
-import StoryDetail from "../components/StoryDetail"
+import StoryList from "../components/StoryList"
 
 const NewsContainer = () => {
-    const [topStories, setTopStories] = useState([]);
+    const [topStories, setTopStories] = useState({});
     // const [stories, setStories] = useState ({})
     const [loaded, setLoaded] = useState(false)
 
@@ -32,10 +32,12 @@ const NewsContainer = () => {
 
 
     return (
-        <StoryDetail
-            topStories={topStories}
-            loaded = {loaded}
+        <>
+        <StoryList 
+        topStories={topStories} 
+        loaded = {loaded}
         />
+        </>
     )
 }
 
