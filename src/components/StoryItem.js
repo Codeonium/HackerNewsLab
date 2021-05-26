@@ -1,9 +1,12 @@
 import React from "react";
 
-const StoryItem = ({title, url}) => {
+const StoryItem = ({title, url, type}) => {
     return (
         <>
-        <a href={url}>{title}</a>
+            <li>
+                <a href={url}>{title} </a>
+                <p>{type}</p>
+            </li>
         </>
     )
 }

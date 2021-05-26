@@ -6,12 +6,14 @@ const StoryList = ({topStories, loaded}) => {
     }
 
     const topStoriesItems = topStories.map(topStory => {
-        return( <StoryItem title={topStory.title} key={topStory.id} url={topStory.url}></StoryItem>)
+        return( <StoryItem title={topStory.title} key={topStory.id} url={topStory.url} type={topStory.type}></StoryItem>)
         
     })
     return (
         <>
-        {topStoriesItems}
+            <ul>
+                {topStoriesItems}
+            </ul>
         </>
     )
 }
